@@ -1,0 +1,28 @@
+[package]
+name = "benches"
+version = "0.1.0"
+authors = ["flip1995 <philipp.krones@embecosm.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.3"
+proptest = "1.0"
+
+[profile.test]
+overflow-checks = false
+
+[[bench]]
+name = "mulsi3"
+harness = false
+
+[[bench]]
+name = "lint_test"
+harness = false
+
+[[bench]]
+name = "lint_test2"
+harness = false
